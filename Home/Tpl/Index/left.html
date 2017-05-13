@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Left</title>
+</head>
+<body>
+		<foreach name='list' item='vo'>
+			<p>留言题目：</p><{$vo.title}><br>
+			<p>留言内容：</p><{$vo.content}><br>
+			<p>留言时间：</p><{$vo.time|date='Y m d H:i:s'.###}><br>
+			<p>留言人：</p><{$vo.username}><br>
+			<p>附件名：</p><{$vo.filename}><br>
+			<hr>
+
+		</foreach>
+		<{$show}>
+</body>
+</html>

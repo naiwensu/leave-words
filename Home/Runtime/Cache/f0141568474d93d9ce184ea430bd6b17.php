@@ -1,0 +1,29 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html public "-/w3c/dtd xhtml 1.1/en" "http://www.w3.org/tr/xhtml11/dtd/xhtml11.dtd"> 
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/basic.css" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/Home/login.css" />
+	<script type="text/javascript" src="__PUBLIC__/Js/jquery.js"></script>
+	<script>
+			$(function(){
+				$('img[title="login"]').click(function(){
+					$('form[name="myForm"]').submit();
+				});
+				$('img[class="register"]').click(function(){
+					window.location='__APP__/Register/reg'
+				})
+			})
+	</script>
+</head>
+<body>
+	<form action="__URL__/doLogin" method="post" name="myForm">
+		用户名：<input type="text" name="username"/><br>
+		密&nbsp;&nbsp;码：<input type="password" name="password"/><br>
+		验证码：<input type="text" name="code"/><img src='__APP__/Public/code' onclick="this.src=this.src+'?'+Math.random()" /><br>
+		<img src="__PUBLIC__/Images/login.gif" title="login"  class="submit" />
+		<img src="__PUBLIC__/Images/register.gif" class="register" />
+	</form>
+
+</body>
+</html>
